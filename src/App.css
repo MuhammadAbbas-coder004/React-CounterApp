@@ -1,0 +1,146 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* App.css */
+
+/* Body and full-screen animated background */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+
+  /* Gradient background */
+  background: linear-gradient(-45deg, #ff6ec4, #7873f5, #42e695, #fddb92);
+  background-size: 400% 400%;
+
+  /* Animation */
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container */
+#app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Heading */
+#app-heading {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  animation: floatHeading 3s ease-in-out infinite;
+}
+
+/* Floating heading animation */
+@keyframes floatHeading {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Counter display */
+#counter-display {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  background-color: rgba(255,255,255,0.9);
+  color: #333;
+  padding: 20px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
+}
+
+#counter-display:active {
+  transform: scale(1.1);
+}
+
+/* Button container */
+#button-container {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+#increment-btn, #decrement-btn {
+  font-size: 1.3rem;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Increment button */
+#increment-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+#increment-btn:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+/* Decrement button */
+#decrement-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+#decrement-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+/* Footer */
+#footer-text {
+  font-size: 1rem;
+  max-width: 400px;
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #counter-display {
+    font-size: 4rem;
+    padding: 15px 40px;
+  }
+
+  #increment-btn, #decrement-btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+
+  #app-heading {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+}
+
+
+
