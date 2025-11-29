@@ -10,7 +10,7 @@ setNum(num + 1);
 
 const subnum = ()=>{
 if(num === 0){
-console.log("No subtriction");
+console.log("No subtraction");
 
 }else{
   setNum(num - 1);
